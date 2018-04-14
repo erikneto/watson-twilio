@@ -5,12 +5,12 @@ module.exports.message = (msgInput, context) => {
     return new Promise((resolve, reject) => {
 
         const assistant = new watson.AssistantV1({
-            username: process.env.ASSISTANT_USERNAME || 'e51d5555-bbce-44c7-b51c-fafb7d037293',
-            password: process.env.ASSISTANT_PASSWORD || 'ctQFAgPKJqop',
+            username: process.env.ASSISTANT_USERNAME || '<username>',
+            password: process.env.ASSISTANT_PASSWORD || '<password>',
             version: '2018-02-16'
         });
         const payload = {
-            workspace_id: 'f716bbef-d7c8-4563-b5ef-9c0f008eb71f',
+            workspace_id: '<workspace>',
             context: context || {},
             input: msgInput || {}
         };
